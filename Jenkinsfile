@@ -3,6 +3,7 @@ pipeline {
     docker { 
         maven 'Maven:latest' 
          
+       }
     }
     stages {
         stage ('Initialize') {
@@ -11,10 +12,9 @@ pipeline {
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 ''' 
+               
             }
-        }
 
-          
-        }
+         }
     }
 }
