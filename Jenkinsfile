@@ -2,7 +2,7 @@ pipeline {
     agent {
     docker { 
         maven 'Maven:latest' 
-        jdk 'jdk8' 
+         
     }
     stages {
         stage ('Initialize') {
