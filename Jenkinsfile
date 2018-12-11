@@ -1,7 +1,7 @@
 pipeline {
-    agent any
-    tools { 
-        maven 'Maven 3.3.9' 
+    agent {
+    docker { 
+        maven 'Maven:latest' 
         jdk 'jdk8' 
     }
     stages {
@@ -14,10 +14,7 @@ pipeline {
             }
         }
 
-        stage ('Build') {
-            steps {
-                echo 'This is a minimal pipeline.'
-            }
+          
         }
     }
 }
