@@ -1,7 +1,7 @@
 pipeline {
     agent {
     docker { 
-        maven 'Maven:latest' 
+        image 'maven:latest' 
          
        }
     }
@@ -12,7 +12,7 @@ pipeline {
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 ''' 
-               
+                
             }
 
          }
